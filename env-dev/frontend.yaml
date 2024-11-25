@@ -11,3 +11,11 @@ env:
   PAYMENT_PORT : "8080"
 
 appName: frontend
+service:
+  containerPort: 80
+  type: LoadBalancer
+  servicePort: 80
+
+
+
+
