@@ -20,4 +20,7 @@ spec:
         ports:
         - containerPort: 80
         env:
-{{ include .Values.env . | indent 10 }}
+        {{- range $k, $v := .Values.env }}
+          - name: {{ $k }}
+            value: {{ $v }}
+        {{- end }}

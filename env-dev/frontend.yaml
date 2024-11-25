@@ -1,6 +1,7 @@
 env:
-  - name: CATALOGUE_HOST
-    value: catalogue
+  CATALOGUE_HOST: catalogue
+
+env1:
   - name: CATALOGUE_PORT
     value: "8080"
   - name: USER_HOST
