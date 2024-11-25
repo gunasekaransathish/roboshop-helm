@@ -1,0 +1,13 @@
+env:
+  MONGO: true
+  MONGO_URL: "mongodb://mongodb-dev.rdevopsb81.online:27017/catalogue"
+
+appName: catalogue
+service:
+  containerPort: 8080
+  type: ClusterIP
+  servicePort: 8080
+
+
+
+
