@@ -3,7 +3,7 @@ env:
   MONGO_URL: "mongodb://mongodb-dev.rdevopsb81.online:27017/users"
   REDIS_URL: "redis://redis-dev.rdevopsb81.online:6379"
 
-appName: cart
+appName: user
 service:
   containerPort: 8080
   type: ClusterIP
