@@ -8,11 +8,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      {{- include "common.labels" . | indent 4 }}
+      {{- include "common.labels" . | indent 6 }}
   template:
     metadata:
       labels:
-        {{- include "common.labels" . | indent 4 }}
+        {{- include "common.labels" . | indent 8 }}
     spec:
       containers:
       - name: {{ .Values.appName }}
