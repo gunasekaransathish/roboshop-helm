@@ -1,0 +1,17 @@
+env:
+  DB_TYPE: mysql
+  APP_GIT_URL: https://github.com/roboshop-devops-project-v3/shipping
+  DB_HOST: mysql-dev.rdevopsb81.online
+  SCHEMA_FILE: db/schema.sql
+  DB_USER: root
+  DB_PASS: RoboShop@1
+
+appName: payment
+service:
+  containerPort: 8080
+  type: ClusterIP
+  servicePort: 8080
+
+
+
+
