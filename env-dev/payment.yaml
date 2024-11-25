@@ -1,10 +1,11 @@
 env:
-  DB_TYPE: mysql
-  APP_GIT_URL: https://github.com/roboshop-devops-project-v3/shipping
-  DB_HOST: mysql-dev.rdevopsb81.online
-  SCHEMA_FILE: db/schema.sql
-  DB_USER: root
-  DB_PASS: RoboShop@1
+  CART_HOST: cart
+  CART_PORT: "8080"
+  USER_HOST: user
+  USER_PORT: "8080"
+  AMQP_HOST: rabbitmq-dev.rdevopsb81.online
+  AMQP_USER: roboshop
+  AMQP_PASS: roboshop123
 
 appName: payment
 service:
