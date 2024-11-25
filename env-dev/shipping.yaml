@@ -1,0 +1,13 @@
+env:
+  CART_ENDPOINT: "cart:8080"
+  DB_HOST: mysql-dev.rdevopsb81.online
+
+appName: user
+service:
+  containerPort: 8080
+  type: ClusterIP
+  servicePort: 8080
+
+
+
+
