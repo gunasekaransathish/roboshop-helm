@@ -8,6 +8,19 @@ service:
   type: ClusterIP
   servicePort: 8080
 
+schema:
+  enabled: true
+  dbExtention: sql
+  env:
+    DB_TYPE: mysql
+    APP_GIT_URL: https://github.com/roboshop-devops-project-v3/shipping
+    DB_HOST: mysql-dev.rdevopsb81.online
+    DB_USER: root
+    DB_PASS: RoboShop@1
+  containers:
+    - app-user
+    - schema
+    - master-data
 
 
 
