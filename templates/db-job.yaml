@@ -11,12 +11,12 @@ spec:
       - name: {{ $.Values.appName }}-{{ . }}-load
         image: public.ecr.aws/w8x4g9h7/roboshop-v3/schema-load
         env:
+          - name: SCHEMA_FILE
+            value: db/{{ . }}.{{ $.Values.dbExtention }}
         {{- range $k, $v := $.Values.schema.env }}
           - name: {{ $k }}
             value: {{ $v | quote }}
-        {{ end }}
-        - name: SCHEMA_FILE
-          value: db/{{ . }}.{{ $.Values.dbExtention }}
+        {{- end }}
       restartPolicy: Never
 {{ end }}
 {{ end }}
