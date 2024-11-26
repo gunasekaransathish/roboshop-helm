@@ -9,7 +9,7 @@ service:
   servicePort: 8080
 
 schema:
-  enabled: false
+  enabled: true
   env:
     DB_TYPE: mongo
     APP_GIT_URL: https://github.com/roboshop-devops-project-v3/catalogue
