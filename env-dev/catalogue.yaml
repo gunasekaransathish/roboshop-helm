@@ -10,6 +10,7 @@ service:
 
 schema:
   enabled: true
+  dbExtention: js
   env:
     DB_TYPE: mongo
     APP_GIT_URL: https://github.com/roboshop-devops-project-v3/catalogue
