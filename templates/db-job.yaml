@@ -15,6 +15,7 @@ spec:
           - name: {{ $k }}
             value: {{ $v | quote }}
         {{- end }}
+
         - name: SCHEMA_FILE
           value: db/{{ . }}.{{ $.Values.dbExtention }}
       restartPolicy: Never
