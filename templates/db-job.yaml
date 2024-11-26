@@ -13,6 +13,7 @@ spec:
         env:
           - name: SCHEMA_FILE
             value: db/{{ . }}.{{ $.Values.dbExtention }}
+
         {{- range $k, $v := $.Values.schema.env }}
           - name: {{ $k }}
             value: {{ $v | quote }}
