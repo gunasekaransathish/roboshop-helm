@@ -13,7 +13,7 @@ schema:
   dbExtention: js
   env:
     DB_TYPE: mongo
-    APP_GIT_URL: https://github.com/roboshop-devops-project-v3/catalogue
+    APP_GIT_URL: https://github.com/raghudevopsb81/roboshop-catalogue
     DB_HOST: mongodb-dev.rdevopsb81.online
   containers:
     - master-data
