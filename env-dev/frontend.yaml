@@ -13,7 +13,7 @@ env:
 appName: frontend
 service:
   containerPort: 80
-  type: LoadBalancer
+  type: ClusterIP
   servicePort: 80
 
 
