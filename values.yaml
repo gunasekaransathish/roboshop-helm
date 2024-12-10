@@ -1,2 +1,7 @@
 schema:
   enabled: false
+
+ingress:
+  enabled: false
+
+

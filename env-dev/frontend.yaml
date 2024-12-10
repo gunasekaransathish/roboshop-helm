@@ -16,6 +16,10 @@ service:
   type: ClusterIP
   servicePort: 80
 
+ingress:
+  enabled: true
+  hostName: frontend-dev.rdevopsb81.online
+
 
 
 
