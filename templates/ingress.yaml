@@ -7,8 +7,8 @@ metadata:
 {{- include "common.labels" . | indent 4 }}
 spec:
   ingressClassName: nginx
-  rules: {{ .Values.ingress.hostName }}
-  - host:
+  rules:
+  - host: {{ .Values.ingress.hostName }}
     http:
       paths:
       - backend:
