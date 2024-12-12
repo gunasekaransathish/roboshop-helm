@@ -1,6 +1,6 @@
-env:
-  CART_ENDPOINT: "cart:8080"
-  DB_HOST: mysql-dev.rdevopsb81.online
+# env:
+#   CART_ENDPOINT: "cart:8080"
+#   DB_HOST: mysql-dev.rdevopsb81.online
 
 appName: shipping
 service:
@@ -11,12 +11,6 @@ service:
 schema:
   enabled: true
   dbExtention: sql
-  env:
-    DB_TYPE: mysql
-    APP_GIT_URL: https://github.com/raghudevopsb81/roboshop-shipping
-    DB_HOST: mysql-dev.rdevopsb81.online
-    DB_USER: root
-    DB_PASS: RoboShop@1
   containers:
     - app-user
     - schema
