@@ -15,7 +15,6 @@ spec:
         env:
           - name: SCHEMA_FILE
             value: db/{{ . }}.{{ $.Values.schema.dbExtention }}
-
         envFrom:
         - secretRef:
             name: {{ .Values.appName }}-job
