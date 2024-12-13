@@ -17,7 +17,7 @@ spec:
             value: db/{{ . }}.{{ $.Values.schema.dbExtention }}
         envFrom:
         - secretRef:
-            name: {{ .Values.appName }}-job
+            name: {{ $.Values.appName }}-job
       restartPolicy: Never
 {{ end }}
 {{ end }}
