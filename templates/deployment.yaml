@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.appName }}
+  name: roboshop-{{ .Values.appName }}
   labels:
 {{- include "common.labels" . | indent 4 }}
 spec:
@@ -15,7 +15,7 @@ spec:
         {{- include "common.labels" . | indent 8 }}
     spec:
       containers:
-      - name: roboshop-{{ .Values.appName }}
+      - name: {{ .Values.appName }}
         image: 897722697588.dkr.ecr.us-east-1.amazonaws.com/roboshop-{{ .Values.appName }}:{{ .Values.COMMIT_ID }}
         ports:
         - containerPort: {{ .Values.service.containerPort }}
