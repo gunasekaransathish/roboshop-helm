@@ -4,4 +4,4 @@ schema:
 ingress:
   enabled: false
 
-
+replicas: 2
