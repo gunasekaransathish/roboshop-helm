@@ -16,5 +16,11 @@ schema:
     - schema
     - master-data
 
+probes:
+  initialDelaySeconds: 30
+  periodSeconds: 5
+
+
+
 
 
