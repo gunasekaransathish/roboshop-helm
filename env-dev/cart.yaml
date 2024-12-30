@@ -9,6 +9,10 @@ service:
   type: ClusterIP
   servicePort: 8080
 
+hpa:
+  minReplicas: 2
+  maxReplicas: 10
+
 
 
 

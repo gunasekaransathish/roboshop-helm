@@ -20,6 +20,10 @@ ingress:
   enabled: true
   hostName: frontend-dev.rdevopsb81.online
 
+hpa:
+  minReplicas: 2
+  maxReplicas: 10
+
 
 
 
