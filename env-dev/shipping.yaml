@@ -24,6 +24,12 @@ hpa:
   minReplicas: 2
   maxReplicas: 10
 
+resources:
+  requestsMemory: "2500Mi"
+  limitsMemory: "3500Mi"
+  requestsCpu: "500m"
+  limitsCpu: "800m"
+
 
 
 
