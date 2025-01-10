@@ -8,12 +8,12 @@ metadata:
 spec:
   template:
     spec:
-      securityContext:
-        readOnlyRootFilesystem: true
       containers:
       - name: {{ $.Values.appName }}-{{ . }}-load
         image: 897722697588.dkr.ecr.us-east-1.amazonaws.com/roboshop-schema-load:latest
         imagePullPolicy: Always
+        securityContext:
+          readOnlyRootFilesystem: true
         env:
           - name: SCHEMA_FILE
             value: db/{{ . }}.{{ $.Values.schema.dbExtention }}
