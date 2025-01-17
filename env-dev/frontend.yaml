@@ -30,6 +30,7 @@ resources:
   requestsCpu: "100m"
   limitsCpu: "150m"
 
-
+securityContext:
+  readOnlyRootFilesystem: false
 
 

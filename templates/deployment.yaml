@@ -18,7 +18,7 @@ spec:
       - name: {{ .Values.appName }}
         image: 897722697588.dkr.ecr.us-east-1.amazonaws.com/roboshop-{{ .Values.appName }}:{{ .Values.COMMIT_ID }}
         securityContext:
-          readOnlyRootFilesystem: true
+          readOnlyRootFilesystem: {{ .Values.securityContext.readOnlyRootFilesystem }}
         ports:
         - containerPort: {{ .Values.service.containerPort }}
           name: app
