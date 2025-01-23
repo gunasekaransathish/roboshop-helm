@@ -30,6 +30,8 @@ resources:
   requestsCpu: "500m"
   limitsCpu: "800m"
 
+istiod:
+  allowed_apps: ["cluster.local/ns/default/sa/frontend"]
 
 
 

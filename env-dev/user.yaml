@@ -20,4 +20,5 @@ resources:
   limitsCpu: "150m"
 
 
-
+istiod:
+  allowed_apps: ["cluster.local/ns/default/sa/frontend", "cluster.local/ns/default/sa/payment"]

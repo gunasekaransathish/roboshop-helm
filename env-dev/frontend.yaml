@@ -33,4 +33,5 @@ resources:
 securityContext:
   readOnlyRootFilesystem: false
 
-
+istiod:
+  allowed_apps: ["cluster.local/ns/default/sa/frontend", "cluster.local/ns/devops/sa/nginx-ingress"]
