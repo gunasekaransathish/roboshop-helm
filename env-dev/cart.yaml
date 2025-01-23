@@ -20,5 +20,5 @@ resources:
   limitsCpu: "150m"
 
 istio:
-  allowed_apps: "cluster.local/ns/default/sa/frontend","cluster.local/ns/default/sa/payment","cluster.local/ns/default/sa/shipping"
+  allowed_apps: ["cluster.local/ns/default/sa/frontend", "cluster.local/ns/default/sa/payment", "cluster.local/ns/default/sa/shipping"]
 
