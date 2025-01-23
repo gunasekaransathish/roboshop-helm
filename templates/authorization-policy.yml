@@ -1,3 +1,4 @@
+{{ if .Values.istiod.enabled }}
 ---
 apiVersion: security.istio.io/v1beta1
 kind: PeerAuthentication
@@ -40,5 +41,5 @@ spec:
           {{- range .Values.istiod.allowed_apps }}
           - {{ . | quote }}
           {{- end }}
-
+{{ end }}
 

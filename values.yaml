@@ -12,3 +12,6 @@ probes:
 
 securityContext:
   readOnlyRootFilesystem: true
+
+istiod:
+  enabled: true
