@@ -19,7 +19,10 @@ spec:
   rules:
   - from:
     - source:
-        principals: {{ .Values.istiod.allowed_apps }}
+        principals:
+          {{- range .Values.istiod.allowed_apps }}
+          - {{ . | quote }}
+          {{- end }}
 ---
 apiVersion: security.istio.io/v1
 kind: AuthorizationPolicy
@@ -33,5 +36,9 @@ spec:
   rules:
   - from:
     - source:
-        notPrincipals: [ {{ .Values.istiod.allowed_apps }} ]
+        notPrincipals:
+          {{- range .Values.istiod.allowed_apps }}
+          - {{ . | quote }}
+          {{- end }}
+
 
