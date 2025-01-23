@@ -1,0 +1,37 @@
+---
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
+metadata:
+  name: roboshop-{{ .Values.appName }}
+spec:
+  mtls:
+    mode: STRICT
+---
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+ name: roboshop-{{ .Values.appName }}-allow
+spec:
+  selector:
+    matchLabels:
+      {{- include "common.labels" . | indent 6 }}
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        principals: [ {{ .Values.istiod.allowed_apps }} ]
+---
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: roboshop-{{ .Values.appName }}-deny
+spec:
+  selector:
+    matchLabels:
+      appName: nginx
+  action: DENY
+  rules:
+  - from:
+    - source:
+        notPrincipals: [ {{ .Values.istiod.allowed_apps }} ]
+
