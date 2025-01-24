@@ -34,4 +34,4 @@ securityContext:
   readOnlyRootFilesystem: false
 
 istiod:
-  enabled: false
+  enabled: true
