@@ -1,6 +1,6 @@
 {{- define "common.labels" }}
-appName: {{ .Values.appName }}
+appName: "{{ .Values.appName }}"
 project: "roboshop"
-releaseName: {{ .Release.Name }}
+releaseName: "{{ .Release.Name }}"
 sidecar.istio.io/inject: "{{ .Values.istiod.enabled }}"
 {{- end }}
