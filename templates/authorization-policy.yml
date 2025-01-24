@@ -32,7 +32,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      appName: nginx
+      {{- include "common.labels" . | indent 6 }}
   action: DENY
   rules:
   - from:
