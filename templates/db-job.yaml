@@ -7,6 +7,9 @@ metadata:
   name: {{ $.Values.appName }}-{{ . }}-load
 spec:
   template:
+    metadata:
+      labels:
+        {{- include "common.labels" . | indent 8 }}
     spec:
       containers:
       - name: {{ $.Values.appName }}-{{ . }}-load
