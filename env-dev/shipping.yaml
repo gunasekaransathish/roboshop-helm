@@ -33,6 +33,7 @@ resources:
 istiod:
   allowed_apps: ["cluster.local/ns/default/sa/frontend"]
 
-
+securityContext:
+  readOnlyRootFilesystem: false
 
 
