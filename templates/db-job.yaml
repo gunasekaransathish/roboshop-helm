@@ -9,7 +9,7 @@ spec:
   template:
     metadata:
       labels:
-        {{- include "common.labels" . | indent 8 }}
+        sidecar.istio.io/inject: "{{ .Values.istiod.enabled }}"
     spec:
       containers:
       - name: {{ $.Values.appName }}-{{ . }}-load
