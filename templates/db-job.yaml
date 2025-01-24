@@ -9,7 +9,7 @@ spec:
   template:
     metadata:
       labels:
-        sidecar.istio.io/inject: false
+        sidecar.istio.io/inject: "false"
     spec:
       containers:
       - name: {{ $.Values.appName }}-{{ . }}-load
