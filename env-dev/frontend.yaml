@@ -34,5 +34,5 @@ securityContext:
   readOnlyRootFilesystem: false
 
 istiod:
-  enabled: false
+  enabled: true
   allowed_apps: ["cluster.local/ns/devops/sa/nginx-ingress"]
